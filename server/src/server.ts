@@ -2,10 +2,12 @@ import express from 'express';
 import path from 'node:path';
 import db from './config/connection.js';
 import routes from './routes/index.js';
-import { generateReadme } from ./readmeGenerator.js;
+import { generateReadme } from './readmeGenerator.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+generateReadme(); //generateReadme if it doesn't exist. 
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
