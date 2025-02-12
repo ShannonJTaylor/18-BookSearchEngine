@@ -44,6 +44,11 @@ const resolvers = {
                 throw new AuthenticationError('Cannot find this user');
             }
 
+            const isPasswordValid = await user.isCorrectPassword(password);
+            if (!isPasswordValid) {
+                throw new AuthenticationError('Incorrect password');
+            }
+
             const token = signToken(user.username, user.email, user._id);
             return { token, user };
         },

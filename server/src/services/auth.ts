@@ -10,7 +10,7 @@ interface JwtPayload {
 }
 
 //Verify the token and add the user to the request object
-export const autehnticatToken = (token: string | undefined) => {
+export const authenticateToken = (token: string | undefined) => {
   if (!token) {
     return null;
   }
@@ -37,7 +37,7 @@ export const signToken = (username: string, email: string, _id: unknown) => {
 export const contextMiddleware = ({ req }: { req: any }) => {
   //Extract the token from the request headers
   const token = req.headers.authorization || '';
-  const user = autehnticatToken(token);
+  const user = authenticateToken(token);
   return { user };
 }; 
 
