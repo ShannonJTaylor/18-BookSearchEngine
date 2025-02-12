@@ -3,8 +3,7 @@ import path from 'node:path';
 import db from './config/connection.js';
 //import routes from './routes/index.js';
 import { ApolloServer } from 'apollo-server-express'; //ApolloServer import
-import { typeDefs } from './schemas';  //GraphQL type definitions
-import { resolvers } from './resolvers/schemas'; //GraphQL resolvers
+import { typeDefs, resolvers } from './Schemas/index.js';  //GraphQL type definitions and resolvers
 import { contextMiddleware } from './services/auth.js'; //Context middleware for Apollo Server
 
 
