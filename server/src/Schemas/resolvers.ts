@@ -1,13 +1,13 @@
 import { AuthenticationError } from "apollo-server-express";
-import { User } from "../models/User";
+import User from "../models/User";
 import { signToken } from "../services/auth";
-import { Query, trusted } from "mongoose";
-import { deleteBook, getSingleUser, login } from "../controllers/user-controller";
+//import { Query, trusted } from "mongoose";
+//import { deleteBook, getSingleUser, login } from "../controllers/user-controller";
 
 const resolvers = {
     Query: {
         //Get a single user by ID/Username
-        getSingleUser: async (_parent: any, { id, username }: { id?: string; username?: string }) => {
+        getSingleUser: async (_parent: any, { id, username }: { id?: string; username?: string }, context: any) => {
             if (!context.user) {
                 throw new AuthenticationError('Not logged in');
             }
