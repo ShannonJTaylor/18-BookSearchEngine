@@ -1,19 +1,22 @@
 import { useState } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-
-import { createUser } from '../utils/API';
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import type { User } from '../models/User';
 
 // biome-ignore lint/correctness/noEmptyPattern: <explanation>
-const SignupForm = ({}: { handleModalClose: () => void }) => {
+const SignupForm = ({ handleModalClose }: { handleModalClose: () => void }) => {
   // set initial form state
   const [userFormData, setUserFormData] = useState<User>({ username: '', email: '', password: '', savedBooks: [] });
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
+
+  //Use Apollo's useMutation hook for ADD_USER
+  const [addUser] = useMutation(ADD_USER);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -30,15 +33,25 @@ const SignupForm = ({}: { handleModalClose: () => void }) => {
       event.stopPropagation();
     }
 
-    try {
-      const response = await createUser(userFormData);
+    // try {
+    //   const response = await createUser(userFormData);
 
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
+    //   if (!response.ok) {
+    //     throw new Error('something went wrong!');
+    //   }
 
-      const { token } = await response.json();
-      Auth.login(token);
+    //   const { token } = await response.json();
+    //   Auth.login(token);
+  try {
+    const { data } = await addUser({
+      variables: { user: userFormData },
+    });
+
+    const token = data.addUser.token;
+    Auth.login(token);
+
+    //Close the modal if the sign-up is successful
+    handleModalClose();
     } catch (err) {
       console.error(err);
       setShowAlert(true);
