@@ -6,8 +6,13 @@ import { typeDefs, resolvers } from './Schemas/index.js';  //GraphQL type defini
 import { contextMiddleware } from './services/auth.js'; //Context middleware for Apollo Server
 
 
-const app = express();
+const app = express(); 
 const PORT = process.env.PORT || 3001;
+
+//Middleware for express
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 //Apollo Server setup
 const server = new ApolloServer({
@@ -15,13 +20,6 @@ const server = new ApolloServer({
   resolvers,
   context: contextMiddleware, //Use auth middleware for decoding tokens  
 });
-
-//Apply Apollo Server middleware Express app
-//server.applyMiddleware({ app });
-
-//Middleware for express
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {
