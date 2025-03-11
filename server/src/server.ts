@@ -6,8 +6,8 @@ import { typeDefs, resolvers } from './Schemas/index.js';  //GraphQL type defini
 import { contextMiddleware } from './services/auth.js'; //Context middleware for Apollo Server
 
 
-const app = express(); 
-const PORT = process.env.PORT || 3001;
+const app: any = express(); 
+const PORT = process.env.PORT || 3005;
 
 //Middleware for express
 app.use(express.urlencoded({ extended: true }));

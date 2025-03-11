@@ -1,8 +1,8 @@
 import { AuthenticationError } from "apollo-server-express";
 import User from "../models/User";
 import { signToken } from "../services/auth";
-//import { Query, trusted } from "mongoose";
-//import { deleteBook, getSingleUser, login } from "../controllers/user-controller";
+// import { Query, trusted } from "mongoose";
+// import { deleteBook, getSingleUser, login } from "../controllers/user-controller";
 
 const resolvers = {
     Query: {
