@@ -44,10 +44,10 @@ const SignupForm = ({ handleModalClose }: { handleModalClose: () => void }) => {
     //   Auth.login(token);
   try {
     const { data } = await addUser({
-      variables: { user: userFormData },
+      variables: { username: userFormData.username, email: userFormData.email, password: userFormData.password },
     });
 
-    const token = data.addUser.token;
+    const token = data.createUser.token;
     Auth.login(token);
 
     //Close the modal if the sign-up is successful

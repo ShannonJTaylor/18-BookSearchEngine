@@ -1,6 +1,6 @@
 import { AuthenticationError } from "apollo-server-express";
-import User from "../models/User";
-import { signToken } from "../services/auth";
+import User from "../models/User.js";
+import { signToken } from "../services/auth.js";
 // import { Query, trusted } from "mongoose";
 // import { deleteBook, getSingleUser, login } from "../controllers/user-controller";
 const resolvers = {
