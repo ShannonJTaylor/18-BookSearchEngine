@@ -4,6 +4,7 @@
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Deployed App](#deployed-application)
 - [Screenshot](#screenshots)
 - [Installation Instructions](#installation-instructions)
 - [API Documentation](#api-documentation)
@@ -48,7 +49,7 @@ ___
 ___
 
 ## Deployed Application
-[](https://one8-booksearchengine.onrender.com/)
+[Deployed App](https://one8-booksearchengine.onrender.com/)
 
 ___
 
