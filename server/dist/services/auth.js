@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 dotenv.config();
 //Verify the token and add the user to the request object
 // export const authenticateToken = (token: string | undefined) => {
