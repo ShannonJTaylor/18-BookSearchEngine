@@ -15,10 +15,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2",
-    "vite": "^5.1.6"
-  },
-  "devDependencies": {
+    "react-router-dom": "^6.11.2",   
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.2.1",
