@@ -54,13 +54,11 @@ ___
 
 ## Screenshots
 Take a look at the app!
-![Sign Up!](https://github.com/ShannonJTaylor/18-BookSearchEngine/blob/main/client/src/assets/images/Screenshot%203.png)
+
+![Sign Up!](https://github.com/ShannonJTaylor/18-BookSearchEngine/blob/main/client/src/assets/images/Screenshot3.png)
 ![Search](https://github.com/ShannonJTaylor/18-BookSearchEngine/blob/main/client/src/assets/images/Screenshot1.png)
 See what you can find
 ![Results](https://github.com/ShannonJTaylor/18-BookSearchEngine/blob/main/client/src/assets/images/Screenshot2.png)
-
-
-
 
 ___
 
