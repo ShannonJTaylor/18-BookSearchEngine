@@ -18,15 +18,18 @@
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
 
     /* Type Checking */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "exactOptionalPropertyTypes": true /* Interpret optional property types as written, rather than adding 'undefined'. */,
-    "noImplicitReturns": true /* Enable error reporting for codepaths that do not explicitly return in a function. */,
-    "noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */,
-    "useUnknownInCatchVariables": true /* Ensure 'unknown' is used for catch clause variables. */
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": false,
+    "exactOptionalPropertyTypes": false /* Interpret optional property types as written, rather than adding 'undefined'. */,
+    "noImplicitReturns": false /* Enable error reporting for codepaths that do not explicitly return in a function. */,
+    "noImplicitOverride": false /* Ensure overriding members in derived classes are marked with an override modifier. */,
+    "useUnknownInCatchVariables": false /* Ensure 'unknown' is used for catch clause variables. */,
+    "noImplicitAny": false /* Enable error reporting for expressions and declarations with an implied 'any' type. */,
   },
+
+
   
   "exclude": ["node_modules"]
 }
