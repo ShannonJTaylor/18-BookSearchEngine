@@ -4,6 +4,7 @@
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Screenshot](#screenshots)
 - [Installation Instructions](#installation-instructions)
 - [API Documentation](#api-documentation)
   - [GraphQL Queries](#graphql-queries)
@@ -45,6 +46,12 @@ ___
 - **API:** Google Books API, custom GraphQL API
 
 ___
+
+## Screenshots
+Take a look at the app!
+![Sign Up!]()
+
+
 
 ## Installation Instructions
 To get started with this project, follow these steps:
